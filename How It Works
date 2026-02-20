@@ -1,0 +1,19 @@
+1.User selects a loan type (personal / auto / mortgage)
+
+2.Bot asks for:
+  Monthly income
+  Existing debts
+  Loan amount
+  Loan tenure
+
+3.System:
+  Estimates credit score
+  Checks eligibility
+  Calculates EMI
+
+4.Displays a loan summary card
+
+5.User can reset and try another loan
+
+
+	​    
