@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark">
+
+<div class="chat-wrapper">
+    <div class="chat-card">
+
+        <div class="chat-header">
+            💳 Loan Assistant
+            <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+        </div>
+
+        <div id="chatBox" class="chat-box">
+
+            <div class="bot message">
+                👋 Choose a loan type
+            </div>
+
+            <div class="loan-cards">
+                <div class="card" onclick="sendCard('personal loan')">Personal</div>
+                <div class="card" onclick="sendCard('auto loan')">Auto</div>
+                <div class="card" onclick="sendCard('mortgage')">Mortgage</div>
+            </div>
+
+        </div>
+
+        <div class="typing" id="typing">Loan Assistant is typing...</div>
+
+        <div class="chat-input">
+            <input id="userInput" placeholder="Type here..." />
+            <button onclick="sendMessage()">➤</button>
+            <button class="reset-btn" onclick="resetChat()">⟳</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

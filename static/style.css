@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+/* THEMES */
+body.dark {
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: white;
+}
+
+body.light {
+    background: #f1f5f9;
+    color: #020617;
+}
+
+.chat-wrapper {
+    width: 100%;
+    max-width: 420px;
+    padding: 12px;
+}
+
+.chat-card {
+    height: 92vh;
+    max-height: 680px;
+    background: rgba(15, 23, 42, 0.95);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body.light .chat-card {
+    background: white;
+}
+
+.chat-header {
+    padding: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 14px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 80%;
+    padding: 12px 14px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    animation: fade 0.2s ease;
+}
+
+.bot {
+    background: #1f2937;
+    align-self: flex-start;
+}
+
+body.light .bot {
+    background: #e5e7eb;
+}
+
+.user {
+    background: #2563eb;
+    color: white;
+    align-self: flex-end;
+}
+
+/* LOAN CARDS */
+.loan-cards {
+    display: flex;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.card {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    border-radius: 12px;
+    background: #020617;
+    border: 1px solid #334155;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+body.light .card {
+    background: #f8fafc;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* TYPING */
+.typing {
+    font-size: 12px;
+    padding-left: 14px;
+    opacity: 0.6;
+    display: none;
+}
+
+/* INPUT */
+.chat-input {
+    display: flex;
+    gap: 6px;
+    padding: 12px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #cbd5f5;
+}
+
+button {
+    padding: 0 14px;
+    border-radius: 10px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.reset-btn {
+    background: #dc2626;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
